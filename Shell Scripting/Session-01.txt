@@ -1,0 +1,70 @@
+# 🚀 Manual Deployment: Problems and Solutions
+
+## 1. ❌ Problems in Manual Deployment
+
+The following challenges occur when deployment is performed manually:
+
+1. **Documentation Dependency:** Documentation is the only source of deployment instructions.
+2. **Time-Consuming Process:** Manual deployment takes more time and effort.
+3. **Human Errors:** Incorrect commands or missed steps can cause deployment failures.
+4. **No Easy Rollback:** Restoring the previous working version is difficult when something goes wrong.
+5. **Poor Change Tracking:** Identifying who made a change and what was changed is difficult.
+
+---
+
+## 2. ⚙️ What Is Scripting?
+
+**Scripting** means storing a sequence of commands in a single file and executing that file to automate a process.
+
+**Example:** Instead of executing 10 deployment commands manually, we can write them in a shell script and execute the script.
+
+**Key Benefit:** Automation reduces repetitive work, saves time, and minimizes human errors.
+
+---
+
+## 3. 💻 Where Should We Store Deployment Scripts?
+
+### Option 1: Store Scripts on a Local Laptop
+
+Storing scripts only on a local laptop creates several problems:
+
+- 🔴 **Security Risks:** Unauthorized access or accidental exposure.
+- 🔴 **No Reliable Backup:** Scripts may be lost if the laptop fails.
+- 🔴 **No Version Control:** Previous versions are difficult to manage.
+- 🔴 **Poor Collaboration:** Team members cannot easily share and maintain scripts.
+- 🔴 **No Review Mechanism:** Changes may be executed without peer review.
+- 🔴 **No Change Tracking:** It is difficult to identify who changed what and when.
+
+---
+
+## 4. ✅ Solution: Version Control System (VCS)
+
+To overcome these problems, we need a reliable **Version Control System (VCS)**, also known as **Source Code Management (SCM)**.
+
+A VCS helps us store, track, manage, review, and collaborate on scripts and source code.
+
+### Key Benefits of Version Control
+
+- **Version History:** Track changes and access previous versions.
+- **Backup and Recovery:** Keep copies of the repository on a remote server.
+- **Collaboration:** Allow multiple team members to work together.
+- **Code Review:** Review changes before merging them.
+- **Accountability:** Identify who made each change.
+- **Change Tracking:** Understand what changed and when.
+
+### Popular Tools
+
+- **Git:** Distributed version control system.
+- **GitHub:** Platform for hosting Git repositories.
+- **GitLab:** Platform for Git repositories, collaboration, and CI/CD.
+- **Azure Repos:** Source control service in Azure DevOps.
+
+---
+
+## 🎯 Final Takeaway
+
+**Manual Deployment → Scripting → Version Control → Automated Deployment**
+
+Store deployment scripts in a **Git repository hosted on GitHub, GitLab, or Azure Repos**, rather than relying only on a local laptop.
+
+This provides version history, collaboration, review, and recovery capabilities.
