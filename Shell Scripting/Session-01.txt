@@ -1,0 +1,169 @@
+Problems in Manual Deployment:
+1. only source we have is document.
+2. Time taking process.
+3. Human mistakes.
+4. Can't restore, If something goes wrong.
+5. Who changed, Identification is also tough.
+
+Scripting : Keeping all the commands in single file and run.
+
+We need scripting to automate the process and address all the above problems in manual deployment process.
+
+Where to store the script.?
+
+if we store in laptop
+
+ Issues:
+ 
+    1. No security 
+    2. No backup 
+    3. No version control(1.0.0, 1.1.0, 2.0.0)
+    4. No colloboration
+    5. No review Mechanism
+    6. No tracking Mehanism 
+
+To address the above issues we require solid version control system or source code managemet to manage the scripts/programs.
+
+What is repository.? -> storage of something
+
+Git -> Stoage of source code 
+Google Drive -> File/object storage
+Artifact repository -> artifacts storage
+
+create respository in github.com
+clone the repository in local -> a copy of repository
+open vscode, open folder in file menu 
+
+where  do we develop script/code .?
+
+IDE -> Integrated development environment to develop the code in easy way.
+
+Shell scripting is native scripting in linux servers. where as go, python are foreign languages.
+
+within the linux server if we want to automate anything we prefer shell scripting. for outside we prefer python.
+
+shebang:
+======
+#!/bin/bash -> It should be the first line in shell script.
+
+Shebang is the interpreter to execute the commands inside shell script, without this linux does not understand how to execute your script.
+
+shell script === bash script 
+
+I have developed script in my laptop, how to store it in git repository.
+
+1. add to statging/temp area
+2. commit to local repository
+3. push to remote respository
+
+git add 01-hello-worl.sh -> this adds file to the staging/temp area.
+git commit -m "my first shell script" -> commit the code to local repo.
+git push origin main -> code is pushed to remote repository.
+
+for first time git users
+========================
+ git commit -m "my first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'siva@LAPTOP-AAIF3H01.(none)')
+
+git push, it asks for authentication
+
+sign with browser
+
+
+folder vs git repo
+------------------
+if the folder has .git it is called as git repo.
+if  the folder does not have .git it is just a normal folder.
+
+imp file -> need changes -> create another copy => do the changes -> show to TL -> if he is okay, then proceed
+
+create corresponding repository in remote repository in git
+
+push an existing repo(my_first_repo) from the command line:
+----------------------------------------------------------
+git init 
+git branch -M main
+git add .
+git commit 
+git remote add origin <URL>
+git push -u origin main
+
+
+how to run shell script file in linux server.?
+
+sh <file-name>
+
+
+echo "Hello world" -> print the text in linux console.
+
+conversation.sh
+
+#!/bin/bash 
+
+echo "Ramesh:: Hi, suresh. How are you.? "
+echo "suresh:: Hello Ramesh. I am good. How about you.?"
+echo "Ramesh:: I am good too suresh. Thanks for asking"
+
+
+
+DRY -> Don't repeat yourself
+X=0, Y=1
+
+derive the formula
+
+finally substitute the values
+
+variables:
+
+1. hold the values against variable name
+2. if you change in single place, it will be effected everywhere wherever you refer
+3. prevent accidental changes
+
+these are the concepts are there in every progrmming/scripting languages
+
+variables
+data types
+conditions
+functions
+loops
+error handling
+
+sh 04-variables.sh John Raheem
+
+John Raheem -> arguments/args/parameters to the script
+
+$1=John
+$2=Raheem
+
+Script executed at: 08:34AM
+Script completed at: 08:35
+Total time for execution is 1min
+
+How will you execute a command and take output into variable.?
+
+START_TIME=$(date +%s)
+
+sh 06-script.sh sivakumar siva123
+
+
+
+
+
+
+
+
+
+
+
